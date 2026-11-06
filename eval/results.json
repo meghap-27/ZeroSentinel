@@ -1,0 +1,120 @@
+{
+  "Bandit": {
+    "direct": {
+      "caught": 4,
+      "n": 6,
+      "ids": [
+        "CMD-D1",
+        "CMD-D2",
+        "SQL-D1",
+        "SQL-D2"
+      ]
+    },
+    "wrapper": {
+      "caught": 3,
+      "n": 6,
+      "ids": [
+        "CMD-W1",
+        "CMD-W2",
+        "SQL-W2"
+      ]
+    },
+    "negatives_flagged": [
+      "CMD-N1",
+      "CMD-N2",
+      "SQL-N2"
+    ],
+    "flagged_locations": 13,
+    "precision": 0.538
+  },
+  "Semgrep": {
+    "direct": {
+      "caught": 5,
+      "n": 6,
+      "ids": [
+        "CMD-D1",
+        "CMD-D2",
+        "SQL-D1",
+        "SQL-D2",
+        "PATH-D1"
+      ]
+    },
+    "wrapper": {
+      "caught": 2,
+      "n": 6,
+      "ids": [
+        "CMD-W1",
+        "CMD-W2"
+      ]
+    },
+    "negatives_flagged": [
+      "CMD-N1",
+      "CMD-N2",
+      "PATH-N1"
+    ],
+    "flagged_locations": 10,
+    "precision": 0.7
+  },
+  "ZeroSentinel (reachable findings)": {
+    "direct": {
+      "caught": 6,
+      "n": 6,
+      "ids": [
+        "CMD-D1",
+        "CMD-D2",
+        "SQL-D1",
+        "SQL-D2",
+        "PATH-D1",
+        "PATH-D2"
+      ]
+    },
+    "wrapper": {
+      "caught": 6,
+      "n": 6,
+      "ids": [
+        "CMD-W1",
+        "CMD-W2",
+        "SQL-W1",
+        "SQL-W2",
+        "PATH-W1",
+        "PATH-W2"
+      ]
+    },
+    "negatives_flagged": [],
+    "flagged_locations": 12,
+    "precision": 1.0
+  },
+  "ZeroSentinel (all, incl. low-confidence)": {
+    "direct": {
+      "caught": 6,
+      "n": 6,
+      "ids": [
+        "CMD-D1",
+        "CMD-D2",
+        "SQL-D1",
+        "SQL-D2",
+        "PATH-D1",
+        "PATH-D2"
+      ]
+    },
+    "wrapper": {
+      "caught": 6,
+      "n": 6,
+      "ids": [
+        "CMD-W1",
+        "CMD-W2",
+        "SQL-W1",
+        "SQL-W2",
+        "PATH-W1",
+        "PATH-W2"
+      ]
+    },
+    "negatives_flagged": [
+      "CMD-N2",
+      "SQL-N2",
+      "PATH-N2"
+    ],
+    "flagged_locations": 15,
+    "precision": 0.8
+  }
+}
