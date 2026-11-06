@@ -29,8 +29,8 @@ def main(argv: list[str] | None = None) -> int:
     for f in res["findings"]:
         print(render(f, color) + "\n")
     high = sum(f.severity >= 7 for f in res["findings"])
-    print(f"{len(res['findings'])} findings ({high} high or critical) in "
-          f"{len(res['files'])} files, {res['duration']:.2f}s")
+    took = f"{res['duration'] * 1000:.0f} ms" if res["duration"] < 1 else f"{res['duration']:.2f} s"
+    print(f"{len(res['findings'])} findings ({high} high or critical) in {len(res['files'])} files, {took}")
     return 1 if high else 0
 
 

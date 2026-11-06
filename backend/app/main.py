@@ -110,6 +110,12 @@ def get_file(scan_id: str, path: str) -> str:
     return content
 
 
+@app.get("/api/scans/{scan_id}/files")
+def get_files(scan_id: str) -> dict[str, str]:
+    rows = store.db.execute("SELECT path, content FROM files WHERE scan_id=?", (scan_id,))
+    return {r["path"]: r["content"] for r in rows}
+
+
 @app.get("/api/scans/{scan_id}/report", response_class=PlainTextResponse)
 def get_report(scan_id: str) -> str:
     return dumps(store.findings(scan_id))
